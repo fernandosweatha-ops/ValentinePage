@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forever Yours</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fad0c4;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow: hidden; /* petals stay inside screen */
+    }
+
+    h1 {
+      margin-top: 200px;
+      font-size: 2.5em;
+      font-style: italic;
+      color: #e63946;
+      display: none; /* hidden until click */
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffb703; }
+      to { text-shadow: 0 0 20px #ff006e; }
+    }
+
+    button {
+      margin-top: 250px;
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #d62828;
+    }
+
+    /* Rose petals animation */
+    .petal {
+      position: absolute;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background: #e63946;
+      border-radius: 50% 50% 50% 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Button to trigger animation -->
+  <button onclick="showFinal()">Click to Reveal 💖</button>
+
+  <!-- Final romantic message -->
+  <h1 id="finalMessage">
+    This Valentine’s, and every day after,<br>
+    I am yours — always and forever ❤️
+  </h1>
+
+  <!-- Rose petals (hidden until click) -->
+  <div class="petal" style="left:10%; animation-duration:6s; display:none;"></div>
+  <div class="petal" style="left:30%; animation-duration:8s; display:none;"></div>
+  <div class="petal" style="left:50%; animation-duration:7s; display:none;"></div>
+  <div class="petal" style="left:70%; animation-duration:9s; display:none;"></div>
+  <div class="petal" style="left:90%; animation-duration:10s; display:none;"></div>
+
+  <script>
+    function showFinal() {
+      // Show the final message
+      document.getElementById("finalMessage").style.display = "block";
+
+      // Show petals
+      let petals = document.getElementsByClassName("petal");
+      for (let i = 0; i < petals.length; i++) {
+        petals[i].style.display = "block";
+      }
+
+      // Hide the button after click
+      event.target.style.display = "none";
+    }
+  </script>
+</body>
+</html>
