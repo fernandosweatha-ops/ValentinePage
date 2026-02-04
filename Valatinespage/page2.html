@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cake Cutting Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe5ec;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: #4a2c2a;
+    }
+
+    .cake-section {
+      margin-top: 60px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #d62828;
+    }
+
+    #message {
+      margin-top: 25px;
+      font-size: 1.3em;
+      font-style: italic;
+      color: #6a040f;
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background: #e63946;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      transition: background 0.3s;
+    }
+
+    a:hover {
+      background: #d62828;
+    }
+  </style>
+</head>
+<body>
+  <div class="cake-section">
+    <h1>Let’s Cut the Cake Together 🎂</h1>
+    <img src="cake.webp" alt="Valentine Cake" id="cake">
+    <br>
+    <button onclick="cutCake()">Cut the Cake</button>
+    <p id="message">
+      Just as we share this cake, we share one soul in two bodies,  
+      forever united in love. My baby, you are my sweetest celebration.
+    </p>
+  </div>
+
+  <a href="page.html">View Next ➡️</a>
+
+  <script>
+    function cutCake() {
+      document.getElementById("cake").style.opacity = "0.5"; // cake looks "cut"
+      document.getElementById("message").style.display = "block"; // reveal message
+    }
+  </script>
+</body>
+</html>
+

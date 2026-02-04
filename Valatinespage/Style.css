@@ -1,0 +1,35 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  text-align: center;
+  color: #4a2c2a;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+.cake img {
+  width: 250px;
+  margin: 20px;
+}
+
+button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background: #d62828;
+}
+
+footer {
+  margin-top: 40px;
+  font-style: italic;
+}
